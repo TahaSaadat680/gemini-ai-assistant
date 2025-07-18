@@ -2,11 +2,12 @@ from flask import Flask, request, render_template, jsonify
 import google.generativeai as genai
 import traceback
 import sys
+import os
+API_KEY = os.environ.get("GEMINI_API_KEY")
+genai.configure(api_key=API_KEY)
 
 app = Flask(__name__)
 
-# Your API key (you should move this to environment variables later)
-API_KEY = "AIzaSyAIiI3JVnnRTBRsJZbgw_QofBXtf1iWNZM"
 
 print("🔧 Configuring Gemini API...")
 try:
