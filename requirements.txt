@@ -2,3 +2,6 @@ Flask==2.3.3
 google-generativeai==0.3.2
 gunicorn==21.2.0
 protobuf>=4.23,<5
+flask
+google-generativeai
+
