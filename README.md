@@ -62,18 +62,13 @@ Your intelligent AI companion for insightful conversations, file uploads, and mo
 ## ⚙️ Deployment
 
 - **Production:**
-  - Use [Render](https://render.com/), [Railway](https://railway.app/), [PythonAnywhere](https://www.pythonanywhere.com/), or [Heroku](https://heroku.com/).
+  - https://gemini-ai-assistant-ya88.onrender.com/
   - Use `gunicorn` for production serving:
     ```sh
     gunicorn app:app
     ```
   - Set environment variables for your API key and secret key.
 
-- **Expose Locally:**
-  - Use [ngrok](https://ngrok.com/) for a public URL:
-    ```sh
-    ngrok http 5000
-    ```
 
 ---
 
