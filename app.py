@@ -106,9 +106,12 @@ def chat():
         ai_reply = f"❌ Error: {str(e)}"
     return jsonify({"reply": ai_reply})
 
+import os
+
 if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))
     print("🚀 Starting Flask app...")
-    print("📍 Main app: http://127.0.0.1:5000/")
-    print("📍 API test: http://127.0.0.1:5000/api-test")
+    print(f"📍 Main app: http://0.0.0.0:{port}/")
+    print(f"📍 API test: http://0.0.0.0:{port}/api-test")
     print("="*50)
-    app.run(debug=True, host='127.0.0.1', port=5000)
+    app.run(debug=True, host='0.0.0.0', port=port)
